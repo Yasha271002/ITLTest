@@ -1,0 +1,131 @@
+﻿<Page x:Class="ITLTest.FourPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ITLTest"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080"
+      d:DesignWidth="1920"
+      Background="Black"
+      Title="FourPage">
+
+    <Grid>
+        <TextBlock 
+            FontFamily="{StaticResource Montsserat}"
+            Text="ФАЙЛ УСПЕШНО ОТПРАВЛЕН"
+            TextAlignment="Center"
+            TextWrapping="Wrap"
+            Padding="30"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,168,0,0" 
+            FontSize="42"
+            FontStyle="Italic"
+            FontWeight="ExtraBold"
+            LineHeight="42"
+            Foreground="White"
+            Grid.Column="1"
+            Width="624"/>
+
+        <TextBlock 
+            FontFamily="{StaticResource Montsserat}"
+            Text="Также вы можете скачать каталог себе на телефон, отсканировав этот QR-код"
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Grid.Column="1"
+            FontSize="28"
+            FontWeight="Light"
+            FontStyle="Italic"
+            Foreground="#7D7D7D"
+            Margin="0,340,0,0" Width="619"/>
+
+        <TextBlock 
+            Text="IWT"
+            Grid.Column="1"
+            Foreground="#7D7D7D"
+            FontStyle="Italic"
+            FontSize="28"
+            TextAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left" RenderTransformOrigin="0.542,0.57" Margin="451,858,0,0"/>
+
+        <TextBlock
+            Text="RED"
+            Grid.Column="1"
+            Foreground="#7D7D7D"
+            FontStyle="Italic"
+            FontSize="28"
+            TextAlignment="Center"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            RenderTransformOrigin="0.542,0.57"
+            Margin="775,858,0,0"
+            />
+
+        <Image 
+            Source="/Images/RedQR.png"
+            Grid.Column="1"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Width="288"
+            Margin="0,540,336,0"
+            />
+
+        <Image
+            Source="/Images/ITLQR.png"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="288" Margin="331,540,0,0"/>
+
+        <Image 
+            Source="/Images/SoldierPhotoForFourPage.png"
+            Grid.Column="0"
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"/>
+        <Image
+            Source="/Images/OnlyRed.png"
+            Grid.Column="0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Width="276" Margin="0,22,0,0"/>
+        <Image 
+            Source="/Images/OnlyITL.png"
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="175"
+            Margin="59,19,0,0"/>
+
+        <Button 
+           Content="Просмотреть PDF-Файл"
+           VerticalAlignment="Bottom"
+           HorizontalAlignment="Left"
+           FontSize="15"
+           Background="Black"
+           Foreground="#FBB911"
+           BorderBrush="#FBB911"
+           BorderThickness="2"
+           Padding="10"
+           Margin="53,0,0,103"/>
+        <Button 
+           Content="Просмотреть PDF-Файл"
+           VerticalAlignment="Bottom"
+           HorizontalAlignment="Left"
+           FontSize="15"
+           Background="Black"
+           Foreground="#FBB911"
+           BorderBrush="#FBB911"
+           BorderThickness="2"
+           Padding="10"
+           Margin="409,0,0,103"/>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Page>

@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ITLTest"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" 
+        x:Name="ResponsiveWindow"
+        Height="1080"
+        Width="1920"
+        WindowStyle="None"
+        WindowState="Maximized"
+        Background="Black">
 
+    <Grid>
+        <Frame 
+            x:Name="MainPage"
+            NavigationUIVisibility="Hidden">
+        </Frame>
     </Grid>
 </Window>

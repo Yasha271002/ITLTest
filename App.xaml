@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:ITLTest"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Montsserat">\Font\#Montserrat</FontFamily>
     </Application.Resources>
 </Application>

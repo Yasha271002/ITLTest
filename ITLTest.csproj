@@ -8,4 +8,38 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Font\Montserrat-Italic.ttf" />
+    <None Remove="Images\DoubleLogo.png" />
+    <None Remove="Images\ITL.png" />
+    <None Remove="Images\ITLQR.png" />
+    <None Remove="Images\OnlyITL.png" />
+    <None Remove="Images\OnlyRed.png" />
+    <None Remove="Images\Red.png" />
+    <None Remove="Images\RedQR.png" />
+    <None Remove="Images\SoldierPhoto.png" />
+    <None Remove="Images\SoldierPhotoForFourPage.png" />
+    <None Remove="Images\SoldierPhotoForThreePage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Font\Montserrat-Italic.ttf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\DoubleLogo.png" />
+    <Resource Include="Images\ITL.png" />
+    <Resource Include="Images\ITLQR.png" />
+    <Resource Include="Images\OnlyITL.png" />
+    <Resource Include="Images\OnlyRed.png" />
+    <Resource Include="Images\Red.png" />
+    <Resource Include="Images\RedQR.png" />
+    <Resource Include="Images\SoldierPhoto.png" />
+    <Resource Include="Images\SoldierPhotoForFourPage.png" />
+    <Resource Include="Images\SoldierPhotoForThreePage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmNavigation.Wpf" Version="3.2.0" />
+  </ItemGroup>
+
 </Project>
