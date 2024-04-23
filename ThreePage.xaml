@@ -75,9 +75,26 @@
             BorderBrush="White"
             Width="512"
             HorizontalAlignment="Left"
-            VerticalAlignment="Bottom" Margin="379,0,0,222"/>
+            VerticalAlignment="Bottom"
+            Margin="379,0,0,222">
+            <Button.ToolTip>
+                <ToolTip Background="#7D7D7D" 
+                         Width="200"
+                         Height="200">
+                    <StackPanel>
+                        <TextBlock Margin="3"
+                                   Foreground="Black"
+                                   FontFamily="{StaticResource Montsserat}"
+                                   FontSize="16"
+                                   >
+                            Пароль 000
+                        </TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
 
-        <Image 
+            <Image 
             Source="/Images/SoldierPhotoForThreePage.png"
             Grid.Column="1"
             VerticalAlignment="Stretch"
