@@ -51,7 +51,6 @@
             <Button
                 FontFamily="{StaticResource Montsserat}"
                 x:Name="ButtonConfirmNumber"
-                Click="ButtonConfirmNumber_Click"
                 Content="Подтвердить Номер"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Top"
