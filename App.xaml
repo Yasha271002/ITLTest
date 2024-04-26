@@ -4,6 +4,120 @@
              xmlns:local="clr-namespace:ITLTest"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
+        
         <FontFamily x:Key="Montsserat">\Font\#Montserrat</FontFamily>
+        
+        
+        <Style x:Key="placeHolder" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Grid>
+                            <TextBox Text="{Binding Path=Text,
+                                                RelativeSource={RelativeSource TemplatedParent}, 
+                                                Mode=TwoWay,
+                                                UpdateSourceTrigger=PropertyChanged}"
+                                x:Name="textSource" 
+                                Background="Transparent"
+                                Foreground="Gray"
+                                BorderThickness="0,0,0,2"
+                                BorderBrush="Gray"
+                                Panel.ZIndex="2" />
+                            <TextBox Text="{TemplateBinding Tag}" Background="{TemplateBinding Background}" Panel.ZIndex="1">
+                                <TextBox.Style>
+                                    <Style TargetType="{x:Type TextBox}">
+                                        <Setter Property="Foreground" Value="Transparent"/>
+                                        <Setter Property="BorderBrush" Value="Gray"/>
+                                        <Setter Property="BorderThickness" Value="0,0,0,2"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Path=Text, Source={x:Reference textSource}}" Value="">
+                                                <Setter Property="Foreground" Value="Gray"/>
+                                                <Setter Property="BorderBrush" Value="Gray"/>
+                                                <Setter Property="BorderThickness" Value="0,0,0,2"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBox.Style>
+                            </TextBox>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        
+        <ControlTemplate x:Key="ButtonSecondPage" TargetType="Button">
+            <Border BorderBrush="#FBB911" Background="#FBB911" Name="border">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="Подтвердить Данные">
+                </TextBlock>
+            </Border>
+                <ControlTemplate.Triggers>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#FBB954"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        
+        
+        
+        <ControlTemplate x:Key="ButtonThreePage" TargetType="Button">
+            <Border BorderBrush="#FBB911" Background="#FBB911" Name="border">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="Подтвердить номер">
+                </TextBlock>
+            </Border>
+            <ControlTemplate.Triggers>
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#FBB954"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="RefreshSmsButton" TargetType="Button">
+            <Border BorderBrush="Gray" BorderThickness="0,0,0,2" Background="Black" Name="border">
+                <TextBlock
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Text="Прислать код повтрно">
+                </TextBlock>
+            </Border>
+            <ControlTemplate.Triggers>
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#001"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="PdfButton" TargetType="Button">
+            <Border
+                Name="border"
+                Background="Black"
+                BorderBrush="#FBB911"
+                BorderThickness="2">
+                <TextBlock
+                    Text="Просмотреть PDF-Файл"
+                    FontSize="14"
+                    LineHeight="17"
+                    Foreground="#FBB911"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+                </TextBlock>
+            </Border>
+            <ControlTemplate.Triggers>
+
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter TargetName="border" Property="Background" Value="#001"></Setter>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
     </Application.Resources>
 </Application>

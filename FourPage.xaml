@@ -71,7 +71,7 @@
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
             Width="288"
-            Margin="0,540,336,0"
+            Margin="0,540,290,0"
             />
 
         <Image
@@ -79,53 +79,51 @@
             Grid.Column="1"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Width="288" Margin="331,540,0,0"/>
+            Width="288" Margin="331,539,0,0" RenderTransformOrigin="1.09,0.52"/>
 
         <Image 
             Source="/Images/SoldierPhotoForFourPage.png"
             Grid.Column="0"
             VerticalAlignment="Stretch"
-            HorizontalAlignment="Stretch"/>
+            HorizontalAlignment="Stretch"
+            Width="682"
+            Height="1080"/>
         <Image
             Source="/Images/OnlyRed.png"
             Grid.Column="0"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Width="276" Margin="0,22,0,0"/>
+            Width="241" Margin="0,30,63,0"/>
         <Image 
             Source="/Images/OnlyITL.png"
             Grid.Column="0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Width="175"
+            Width="184"
             Margin="59,19,0,0"/>
 
         <Button 
-           Content="Просмотреть PDF-Файл"
-           VerticalAlignment="Bottom"
-           HorizontalAlignment="Left"
-           FontSize="15"
-           Background="Black"
-           Foreground="#FBB911"
-           BorderBrush="#FBB911"
-           BorderThickness="2"
-           Padding="10"
-           Margin="53,0,0,103"/>
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Template="{StaticResource PdfButton}"
+            FontSize="15"
+            Margin="26,0,0,67"
+            Width="250"
+            Height="72">
+        </Button>
         <Button 
-           Content="Просмотреть PDF-Файл"
-           VerticalAlignment="Bottom"
-           HorizontalAlignment="Left"
-           FontSize="15"
-           Background="Black"
-           Foreground="#FBB911"
-           BorderBrush="#FBB911"
-           BorderThickness="2"
-           Padding="10"
-           Margin="409,0,0,103"/>
+            Template="{StaticResource PdfButton}"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            FontSize="15"
+            Margin="382,0,0,67"
+            Width="250"
+            Height="72">
+        </Button>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1.8*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
     </Grid>
 </Page>

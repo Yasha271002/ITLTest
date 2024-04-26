@@ -24,7 +24,7 @@
             FontWeight="Bold"
             Foreground="White"
             Grid.Column="1"
-            Width="692"/>
+            Width="624"/>
 
         <TextBlock 
             FontFamily="{StaticResource Montsserat}"
@@ -37,45 +37,41 @@
             FontSize="28"
             FontWeight="Light"
             Foreground="#7D7D7D"
-            Margin="0,236,0,0" Width="499"/>
+            Margin="0,236,0,0" Width="512"/>
 
         <TextBox x:Name="textUsername"
+                 Style="{StaticResource placeHolder}"
+                 Tag="Фамилия, Имя, Отчество"
                  FontFamily="{StaticResource Montsserat}"
-                 Text="Фамилия, Имя, Отчество"
-                 BorderBrush="Gray"
-                 BorderThickness="0,0,0,2"
                  HorizontalAlignment="Center" 
                  VerticalAlignment="Top" 
-                 Foreground="Gray"
                  FontSize="25" 
                  MinWidth="500"
                  Grid.Column="1"
                  Height="57"
-                 Width="693" Margin="0,340,0,0" MouseEnter="textUsername_MouseEnter">
+                 Width="693"
+                 Margin="0,340,0,0">
 
-            <TextBox.Background>
+                    <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black" Offset="0.96"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
-
-        <TextBox 
+        <TextBox
+            Style="{StaticResource placeHolder}"
             FontFamily="{StaticResource Montsserat}"
+            Tag="Ваш телефон"
             x:Name="textNumber" 
-            Foreground="Gray"
-            BorderBrush="Gray"
-            BorderThickness="0,0,0,2"
             HorizontalAlignment="Center" 
             VerticalAlignment="Top"
             FontSize="25"
             Margin="0,422,0,0" 
             MinWidth="500"
             Grid.Column="1"
-            Text="Ваш телефон"
             Width="692"
-            Height="57" MouseEnter="textNumber_MouseEnter">
+            Height="57">
 
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -87,18 +83,16 @@
 
         <TextBox 
             FontFamily="{StaticResource Montsserat}"
+            Style="{StaticResource placeHolder}"
+            Tag="E-mail"
             x:Name="textEmail"
-            Foreground="Gray"
-            BorderBrush="Gray"
-            BorderThickness="0,0,0,2"
             FontSize="25"
             HorizontalAlignment="Center" 
             VerticalAlignment="Center"
             MinWidth="500"
             Grid.Column="1"
-            Text="E-mail"
             Width="693"
-            Height="56" MouseEnter="textEmail_MouseEnter">
+            Height="56">
 
             <TextBox.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -125,7 +119,7 @@
 
         <Button 
             FontFamily="{StaticResource Montsserat}"
-            Content="Подтвердить данные" 
+            Template="{StaticResource ButtonSecondPage}"
             HorizontalAlignment="Center" 
             VerticalAlignment="Top"
             FontSize="32"
@@ -135,53 +129,54 @@
             MinHeight="122"
             Grid.Column="1"
             FontWeight="Bold"
-            Background="#FBB911"
-            BorderBrush="#FBB911" Click="Button_Click"/>
+            Click="Button_Click">
+            
+        </Button>
 
         <Image 
             Source="/Images/SoldierPhoto.png"
             Grid.Column="0"
-            VerticalAlignment="Stretch"
-            HorizontalAlignment="Stretch"/>
+            Height="1080"
+            Width="682"/>
         <Image
             Source="/Images/OnlyRed.png"
             Grid.Column="0"
             HorizontalAlignment="Right"
             VerticalAlignment="Top"
-            Width="276" Margin="0,22,0,0"/>
+            Width="241"
+            Height="123"
+            Margin="0,22,0,0"/>
         <Image 
             Source="/Images/OnlyITL.png"
-            Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="175" Margin="59,19,0,0"/>
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Width="184"
+            Height="146"
+            Margin="59,19,0,0"/>
 
-        <Button 
-           Content="Просмотреть PDF-Файл"
-           VerticalAlignment="Bottom"
-           HorizontalAlignment="Left"
-           FontSize="15"
-           Background="Black"
-           Foreground="#FBB911"
-           BorderBrush="#FBB911"
-           BorderThickness="2"
-           Padding="10"
-           Margin="53,0,0,103"/>
-        <Button 
-           
-           Content="Просмотреть PDF-Файл"
-           VerticalAlignment="Bottom"
-           HorizontalAlignment="Left"
-           FontSize="15"
-           Background="Black"
-           Foreground="#FBB911"
-           BorderBrush="#FBB911"
-           BorderThickness="2"
-           Padding="10"
-           Margin="409,0,0,103"/>
-
-        <ContentControl x:Name="_MainPage"/>
+        <Button
+            Template="{StaticResource PdfButton}"
+            Width="250"
+            Height="72"
+            Content="Просмотреть PDF-Файл"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="26,0,0,103">
+        </Button>
+        <Button
+            Template="{StaticResource PdfButton}"
+            Width="250"
+            Height="72"
+            Content="Просмотреть PDF-Файл"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="341,0,0,103">
+        </Button>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1.8*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
     </Grid>
 </Page>

@@ -20,7 +20,7 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             TextWrapping="Wrap"
-            TextAlignment="Center" Margin="0,132,0,0" Width="522"/>
+            TextAlignment="Center" Margin="0,179,0,0" Width="522"/>
 
         <TextBlock 
             FontFamily="{StaticResource Montsserat}"
@@ -30,119 +30,139 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             TextAlignment="Center"
-            Margin="0,338,0,0"/>
+            Margin="0,390,0,0"/>
 
         <TextBox
             FontFamily="{StaticResource Montsserat}"
-            x:Name="PhoneCode"
+            x:Name="PhoneCodeTwo"
+            KeyDown="PhoneCode_KeyDown"
+            TextChanged="PhoneCode_TextChanged"
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             TextAlignment="Center"
-            Width="286"
+            Width="80"
             Height="141"
             Padding="15"
             Background="Black"
             BorderBrush="#7D7D7D"
             Foreground="#7D7D7D"
-            MaxLength="3"
-            FontSize="72"
-            />
+            MaxLength="1"
+            FontSize="72" RenderTransformOrigin="0.57,0.523">
+        </TextBox>
+        <TextBox
+            FontFamily="{StaticResource Montsserat}"
+            KeyDown="PhoneCode_KeyDown"
+            TextChanged="PhoneCode_TextChanged"
+            x:Name="PhoneCode"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            TextAlignment="Center"
+            Width="81"
+            Height="141"
+            Padding="15"
+            Background="Black"
+            BorderBrush="#7D7D7D"
+            Foreground="#7D7D7D"
+            MaxLength="1"
+            FontSize="72" Margin="475,0,0,0"/>
+        <TextBox
+            FontFamily="{StaticResource Montsserat}"
+            KeyDown="PhoneCode_KeyDown"
+            TextChanged="PhoneCode_TextChanged"
+            x:Name="PhoneCodeThree"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            TextAlignment="Center"
+            Width="81"
+            Height="141"
+            Padding="15"
+            Background="Black"
+            BorderBrush="#7D7D7D"
+            Foreground="#7D7D7D"
+            MaxLength="1"
+            FontSize="72" Margin="678,0,0,0"/>
 
-            <Button
-                FontFamily="{StaticResource Montsserat}"
-                x:Name="ButtonConfirmNumber"
-                Content="Подтвердить Номер"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Top"
-                Width="692"
-                FontSize="32"
-                FontWeight="Bold"
-                BorderBrush="#FBB911"
-                Background="#FBB911"
-                Padding="36.12px, 51.51px, 36.12px, 51.51px"
-                BorderThickness="2" Margin="0,634,0,0"/>
+
+        <Button
+            FontFamily="{StaticResource Montsserat}"
+            Template="{StaticResource ButtonThreePage}"
+            x:Name="ButtonConfirmNumber"
+            Click="ButtonConfirmNumber_Click"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Width="692"
+            Height="122"
+            FontSize="32"
+            FontWeight="Bold"
+            BorderBrush="#FBB911"
+            Background="#FBB911"
+            Padding="36.12px, 51.51px, 36.12px, 51.51px"
+            BorderThickness="2" Margin="0,634,0,0"/>
 
         <Button 
             FontFamily="{StaticResource Montsserat}"
-            Content="Прислать код повтрно"
-            Background="Black"
+            Template="{StaticResource RefreshSmsButton}"
             Foreground="#7D7D7D"
             FontSize="28"
             FontWeight="Light"
-            BorderThickness="0,0,0,2"
-            Padding="5"
-            BorderBrush="White"
             Width="512"
             HorizontalAlignment="Left"
             VerticalAlignment="Bottom"
-            Margin="379,0,0,222">
-            <Button.ToolTip>
-                <ToolTip Background="#7D7D7D" 
-                         Width="200"
-                         Height="200">
-                    <StackPanel>
-                        <TextBlock Margin="3"
-                                   Foreground="Black"
-                                   FontFamily="{StaticResource Montsserat}"
-                                   FontSize="16"
-                                   >
-                            Пароль 000
-                        </TextBlock>
-                    </StackPanel>
-                </ToolTip>
-            </Button.ToolTip>
+            Margin="366,0,0,229">
         </Button>
 
-            <Image 
-            Source="/Images/SoldierPhotoForThreePage.png"
-            Grid.Column="1"
-            VerticalAlignment="Stretch"
-            HorizontalAlignment="Stretch"/>
-        
+        <Image 
+                Source="/Images/SoldierPhotoForThreePage.png"
+                Grid.Column="1"
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch"
+                Width="682"
+                Height="1080"/>
+
         <Image 
             Source="/Images/OnlyRed.png"
             Grid.Column="1"
             VerticalAlignment="Top"
             HorizontalAlignment="Right"
-            Width="278"
+            Width="241"
+            Height="123"
             RenderTransformOrigin="0.507,0.491"
-            Margin="0,22,0,0"
+            Margin="0,28,47,0"
             />
-            
+
         <Image 
             Source="/Images/OnlyITL.png"
             Grid.Column="1"
             VerticalAlignment="Top"
-            HorizontalAlignment="Left" Width="163" Margin="60,28,0,0"
+            HorizontalAlignment="Left"
+            Width="184"
+            Height="146"
+            Margin="60,28,0,0"
             />
 
         <Button 
-            Content="Просмотреть PDF-Файл"
+            Template="{StaticResource PdfButton}"
             Grid.Column="1"
+            Width="250"
+            Height="72"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Left"
             FontSize="15"
-            Background="Black"
-            Foreground="#FBB911"
-            BorderBrush="#FBB911"
-            BorderThickness="2"
-            Padding="10"
-            Margin="53,0,0,103"/>
+            Margin="53,0,0,103">
+        </Button>
         <Button 
-            Content="Просмотреть PDF-Файл"
+            Template="{StaticResource PdfButton}"
             Grid.Column="1"
+            Width="250"
+            Height="72"
             VerticalAlignment="Bottom"
             HorizontalAlignment="Left"
             FontSize="15"
-            Background="Black"
-            Foreground="#FBB911"
-            BorderBrush="#FBB911"
-            BorderThickness="2"
-            Padding="10"
-            Margin="409,0,0,103"/>
+            Margin="389,0,0,103">
+        </Button>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="1.8*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
     </Grid>

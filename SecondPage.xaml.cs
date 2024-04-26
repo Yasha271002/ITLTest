@@ -31,33 +31,5 @@ namespace ITLTest
                 this.NavigationService.Navigate(new ThreePage());
             } return;
         }
-
-        private void textUsername_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (textUsername.Text != null)
-            {
-                textUsername.Text = "";
-            }
-            else
-            {
-                textUsername.Text = "Фамилия, Имя, Отчество";
-            }
-        }
-
-        private void textNumber_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if (textNumber.Text != null) 
-            {
-                textNumber.Text = "";
-            } return;
-        }
-
-        private void textEmail_MouseEnter(object sender, MouseEventArgs e)
-        {
-            if(textEmail.Text != null) 
-            {
-                textEmail.Text = "";
-            } return;
-        }
     }
 }
